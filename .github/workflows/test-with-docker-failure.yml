@@ -25,6 +25,13 @@ jobs:
         run: |
           docker compose -f compose.test.failure.yaml up --exit-code-from test-with-docker
 
+      - name: Upload test result to artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-result
+          path: test-result
+
       - name: Check test result
         if: steps.test.outcome == 'failure'
         run: |
