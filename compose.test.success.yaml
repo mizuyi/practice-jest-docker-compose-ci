@@ -1,0 +1,7 @@
+services:
+  test-with-docker:
+    build:
+      context: .
+    command: npm run test-success
+    volumes:
+      - ./test-result:/app/test-result
