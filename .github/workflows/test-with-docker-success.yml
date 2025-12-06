@@ -19,7 +19,7 @@ jobs:
         run: |
           docker compose -f compose.test.success.yaml build
 
-      - name: Run failure test
+      - name: Run success test
         id: test
         continue-on-error: true
         run: |
