@@ -1,0 +1,5 @@
+services:
+  test-with-docker:
+    build:
+      context: .
+    command: npm run test-failure
