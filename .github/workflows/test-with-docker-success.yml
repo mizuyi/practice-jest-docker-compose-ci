@@ -1,4 +1,4 @@
-name: Fail Test with Docker
+name: Success Test with Docker
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
         run: |
           docker compose -f compose.test.success.yaml build
 
-      - name: Run failure test
+      - name: Run success test
         id: test
         continue-on-error: true
         run: |
