@@ -1,4 +1,4 @@
-name: Fail Test with Docker
+name: Fail Test with Exit Code 0
 
 on:
   workflow_dispatch:
